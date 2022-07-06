@@ -1,0 +1,17 @@
+
+.content_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.link{
+  display: block;
+  margin: 20px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  color: blueviolet;
+}

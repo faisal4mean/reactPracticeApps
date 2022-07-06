@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import "./App.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <h1>Demo App</h1>
+        <nav className="navbar">
+          <Link className="link" to="/home" element={<Home />}>
+            Home
+          </Link>
+          <Link className="link" to="/about" element={<About />}>
+            About
+          </Link>
+          <Link className="link" to="/contact" element={<Contact />}>
+            Contact
+          </Link>
+        </nav>
       </header>
+      <Outlet />
     </div>
   );
 }
